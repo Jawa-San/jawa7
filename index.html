@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jawa7 | AI Automation Agency</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
+    <link rel="stylesheet" href="styles.css?v=2">
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+    <style>
+        /* Custom n8n chat widget colors to match website theme */
+        :root {
+            --chat--color-primary: #6366f1;
+            --chat--color-primary-shade-50: #5855e8;
+            --chat--color-primary-shade-100: #4f46e5;
+        }
+        
+        /* Force process timeline sizing - cache buster */
+        #process .process-timeline {
+            max-width: 800px !important;
+            padding-left: 100px !important;
+        }
+        
+        #process .step-number {
+            width: 60px !important;
+            height: 60px !important;
+            left: -98px !important;
+            font-size: 1.2rem !important;
+        }
+        
+        #process .process-step {
+            margin-bottom: 3rem !important;
+        }
+        
+        #process .step-content {
+            padding: 2rem !important;
+        }
+        
+        #process .step-content h3 {
+            font-size: 1.3rem !important;
+        }
+        
+        #process .step-content p {
+            font-size: 1rem !important;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Jawa7</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#process" class="nav-link">Process</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-tagline">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                        AI-Powered Business Automation
+                    </div>
+                    <h1 class="hero-title">
+                        Scale Your Business With<br>
+                        <span class="hero-title-accent">Intelligent Automation</span>
+                    </h1>
+                    <p class="hero-subtitle">We're an AI powered growth agency that helps coaches, consultants, and high-ticket service providers scale their businesses using intelligent automation</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-outline">Book a Demo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">Automation Solutions</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                <path d="M13 8l-3 3 3 3m-6-6l3 3-3 3"/>
+                            </svg>
+                        </div>
+                        <h3>Inbound Sales</h3>
+                        <p>Transform your lead management with intelligent automation that instantly qualifies, engages, and converts prospects through personalized interactions.</p>
+                        <ul class="service-features">
+                            <li>Smart lead qualification & routing</li>
+                            <li>Dynamic response automation</li>
+                            <li>Intelligent pipeline management</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 2L15 22l-7-4-7-4z"/>
+                                <path d="M21.5 2l-1.5 7"/>
+                            </svg>
+                        </div>
+                        <h3>Outbound Sales</h3>
+                        <p>Elevate your outreach campaigns with AI-powered prospecting that identifies, engages, and nurtures potential clients across multiple channels.</p>
+                        <ul class="service-features">
+                            <li>Intelligent prospect identification</li>
+                            <li>Multi-channel outreach automation</li>
+                            <li>Advanced engagement tracking</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"/>
+                                <circle cx="12" cy="12" r="1"/>
+                                <path d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z"/>
+                            </svg>
+                        </div>
+                        <h3>Automated Fulfillment</h3>
+                        <p>Optimize your service delivery with intelligent workflows that automate complex processes while maintaining exceptional quality and accuracy.</p>
+                        <ul class="service-features">
+                            <li>Smart workflow orchestration</li>
+                            <li>Quality assurance automation</li>
+                            <li>Real-time progress tracking</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10,9 9,9 8,9"/>
+                            </svg>
+                        </div>
+                        <h3>Content Systems</h3>
+                        <p>Create and distribute engaging content automatically with AI-powered systems that optimize for maximum impact across all platforms.</p>
+                        <ul class="service-features">
+                            <li>AI content generation & optimization</li>
+                            <li>Cross-platform distribution</li>
+                            <li>Engagement analytics automation</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                <path d="M10 9h4"/>
+                                <path d="M10 13h4"/>
+                            </svg>
+                        </div>
+                        <h3>Customer Service</h3>
+                        <p>Enhance customer experience with intelligent automation that provides instant support and seamless appointment management.</p>
+                        <ul class="service-features">
+                            <li><strong>AI Chatbots:</strong> 24/7 instant customer support</li>
+                            <li><strong>Phone AI:</strong> Automated appointment booking & confirmation</li>
+                            <li>Intelligent ticket routing & escalation</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                            </svg>
+                        </div>
+                        <h3>Custom Solutions</h3>
+                        <p>Tailored automation solutions designed specifically for your unique business needs and operational requirements.</p>
+                        <ul class="service-features">
+                            <li>Bespoke workflow automation</li>
+                            <li>Integration with existing systems</li>
+                            <li>Scalable architecture design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="process">
+            <div class="container">
+                <h2 class="section-title">Our Process</h2>
+                <p class="process-subtitle">We follow a proven methodology to create and deploy AI lead nurturing systems that book more qualified sales calls.</p>
+                <div class="process-timeline">
+                    <div class="process-step" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Sales Process Audit</h3>
+                            <p>We analyze your current lead generation and sales processes to identify gaps and opportunities for AI-powered lead nurturing and call booking optimization.</p>
+                        </div>
+                    </div>
+                    <div class="process-step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Custom Funnel Design</h3>
+                            <p>We design intelligent lead nurturing funnels with AI voice agents and follow-up sequences tailored to your ideal customer profile and sales cycle.</p>
+                        </div>
+                    </div>
+                    <div class="process-step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>AI System Development</h3>
+                            <p>We build and train your custom AI lead nurturing system, integrating with your existing tools and optimizing for maximum call booking rates.</p>
+                        </div>
+                    </div>
+                    <div class="process-step" data-step="4">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Testing & Optimization</h3>
+                            <p>We thoroughly test the AI system with real leads and continuously optimize the nurturing sequences for higher conversion rates.</p>
+                        </div>
+                    </div>
+                    <div class="process-step" data-step="5">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Launch & Scale</h3>
+                            <p>We launch your AI lead nurturing system and provide ongoing support to scale your operations and maximize ROI.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">About Jawa7</h2>
+                        <p>We specialize in intelligent automation solutions that transform how businesses operate. Our AI-powered systems handle everything from customer interactions to complex workflow orchestration, freeing your team to focus on strategic growth.</p>
+                        <p>From chatbots that never sleep to phone AI that books appointments seamlessly, we create automation that feels natural and delivers measurable results. Every solution is tailored to your specific needs and scales with your business.</p>
+                        <div class="stats">
+                            <div class="stat">
+                                <h3>150+</h3>
+                                <p>Automation Systems Deployed</p>
+                            </div>
+                            <div class="stat">
+                                <h3>85%</h3>
+                                <p>Average Efficiency Increase</p>
+                            </div>
+                            <div class="stat">
+                                <h3>24/7</h3>
+                                <p>Continuous Operation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <div class="team-graphic">
+                            <div class="team-member member-1"></div>
+                            <div class="team-member member-2"></div>
+                            <div class="team-member member-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-form-container">
+                    <form class="contact-form" action="https://formspree.io/f/xyzpegvb" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Jawa7</h3>
+                    <p>Intelligent automation solutions that transform business operations.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Automation Solutions</h4>
+                    <ul>
+                        <li><a href="#services">Inbound Sales</a></li>
+                        <li><a href="#services">Outbound Sales</a></li>
+                        <li><a href="#services">Customer Service</a></li>
+                        <li><a href="#services">Content Systems</a></li>
+                        <li><a href="#services">Custom Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#process">Process</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="GitHub">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jawa7. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+        createChat({
+            webhookUrl: 'http://localhost:5678/webhook/d613f7ca-13a4-42e4-ba2d-5f52614cfd08/chat',
+            initialMessages: [
+                'Hi there! 👋',
+                'My name is Jawa. How can I assist you today?'
+            ],
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html> 
