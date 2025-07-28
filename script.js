@@ -40,12 +40,19 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Set dynamic redirect URL for FormSubmit
+document.addEventListener('DOMContentLoaded', () => {
+    const redirectUrlField = document.getElementById('redirect-url');
+    if (redirectUrlField) {
+        const currentOrigin = window.location.origin;
+        redirectUrlField.value = `${currentOrigin}/thank-you.html`;
+    }
+});
+
 // Contact form handling
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
         // Get form data
         const formData = new FormData(this);
         const name = formData.get('name');
@@ -54,27 +61,25 @@ if (contactForm) {
         
         // Simple validation
         if (!name || !email || !message) {
+            e.preventDefault();
             alert('Please fill in all fields');
             return;
         }
         
         if (!isValidEmail(email)) {
+            e.preventDefault();
             alert('Please enter a valid email address');
             return;
         }
         
-        // Simulate form submission
+        // Show loading state
         const submitButton = this.querySelector('button[type="submit"]');
         const originalText = submitButton.textContent;
         submitButton.textContent = 'Sending...';
         submitButton.disabled = true;
         
-        setTimeout(() => {
-            alert('Thank you for your message! We\'ll get back to you soon.');
-            this.reset();
-            submitButton.textContent = originalText;
-            submitButton.disabled = false;
-        }, 2000);
+        // Allow the form to submit naturally to FormSubmit
+        // The form will redirect to a thank you page or back to the form
     });
 }
 
